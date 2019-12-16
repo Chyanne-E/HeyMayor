@@ -9,7 +9,7 @@ tags:
 ---
 
 Philadelphia's current Mayor is James Kenney. Here's some snazzy info on where his public schedule takes him: 
-![Top_20_Most_Visited]({{ site.url }}{{ site.baseurl }}/assets/images/top20_bar_sn.PNG)
+![Top_20_Most_Visited]({{ site.url }}{{ site.baseurl }}/assets/images/top20_bar1.png)
 
 CHART 
 
