@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vega-actions a {
+        margin-right: 12px;
+        color: #757575;
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"width": 400, "height": 300}, "mark": {"tooltip": null}}, "data": {"name": "data-0e0fd47b6c829e86e1dede775ec95c9e"}, "mark": "bar", "encoding": {"x": {"type": "nominal", "field": "Place"}, "y": {"type": "quantitative", "field": "Address"}}, "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json", "datasets": {"data-0e0fd47b6c829e86e1dede775ec95c9e": [{"Place": " Mayor\u2019s Reception Room", "Address": 97}, {"Place": " City Hall", "Address": 70}, {"Place": "\u00a0Mayor\u2019s Reception Room", "Address": 39}, {"Place": " Pennsylvania Convention Center", "Address": 21}, {"Place": "\u00a0City Hall", "Address": 11}, {"Place": " Conversation Hall", "Address": 10}, {"Place": " Municipal Services Building", "Address": 10}, {"Place": " Citizens Bank Park", "Address": 8}, {"Place": " LOVE Park", "Address": 7}, {"Place": " City Hall Courtyard", "Address": 6}, {"Place": " Parkway Central Library", "Address": 6}, {"Place": " Community College of Philadelphia", "Address": 6}, {"Place": " Philadelphia International Airport", "Address": 6}, {"Place": " National Constitution Center", "Address": 6}, {"Place": " Crystal Tea Room", "Address": 5}, {"Place": " Franklin Institute", "Address": 5}, {"Place": " Lincoln Financial Field", "Address": 5}, {"Place": "\u00a0National Constitution Center", "Address": 5}, {"Place": " Temple University", "Address": 5}, {"Place": " Independence Visitor Center", "Address": 5}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
