@@ -1,9 +1,9 @@
 ---
-title: "Example: Embedding Folium charts"
-date: 2019-04-13
+title: "Purpose of this Project"
+date: 2019-12-16
 published: true
 tags: [dataviz, folium]
-excerpt: "Embedding interactive Folium charts on static pages using Jekyll."
+excerpt: "Background on how this data is accessed now."
 folium-loader:
   folium-chart-1: ["charts/foliumChart.html", "400"]
   folium-chart-2: ["charts/percent_no_internet.html", "400"]
@@ -13,16 +13,10 @@ toc: true
 toc_sticky: true
 ---
 
-This post will show examples of embedding interactive maps produced using [Folium](https://github.com/python-visualization/folium).
+### Purpose
+Jim Kenney is in his second term in office as mayor of Philadelphia. He was sworn in as mayor on January 4, 2016, and re-elected this year, for a running total of 1,423 days in office. In a professional capacity, where does Mayor Kenney spend his time? Where in the city does his work take him? Does his movement as mayor reflect the commitments made by his administration? 
 
-## OSMnx and Street Networks
+In this project, I used web scraping to present information about where Mayor Kenney travels most often within the city. This project required complex web scraping, from a website that includes a significant interactive component. Location information from the Mayor’s schedule is published online daily in the City of Philadelphia online archive; the locations the Mayor plans to visit each day can be accessed by clicking on a link to that day’s schedule. 
+My web scraping allowed me to analyze the over 2,000 locations included in the Mayor’s public schedules and determine what locations the Mayor visits most often, something that would be incredibly tedious and time consuming without the web scraping process. 
 
-The shortest route between Spring Garden Station and Frankford Hall:
-
-<div id="folium-chart-1"></div>
-
-## Percentage of Households without Internet
-
-<div id="folium-chart-2"></div>
-
-See the [week 9 lecture slides](https://github.com/MUSA-620-Fall-2019/week-9/blob/master/lecture-9.ipynb) for the code that produced these plots.
+While the web scraping portion of my analysis was successful, building an interactive map to visualize the locations the Mayor visits regularly proved more challenging. 
